@@ -10,9 +10,17 @@
 	<title>Youtube</title>
 </head>
 <body>
-	<input type="text" name="search" placeholder="Search" class="search-box">
+	<div class="header">
+		<div class="left-section">left</div>
+		<div class="middle-section">
+			<input type="text" name="search" placeholder="Search" class="search-box">
+		</div>
+		<div class="right-section">right</div>
+		
+	</div>
+	<div class="video-grid">
 	<div class="video-preview">
-		<img src="thumbnails/thumbnail.webp">
+		<img src="thumbnails/thumbnail.webp" class="video-thumbnail">
 		<div class="preview-info">
 			<div class="channel-thumbnail-block">
 				<img class="channel-thumbnail" src="thumbnails/channel-1.jpeg">		
@@ -67,6 +75,7 @@
 				</p>		
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
