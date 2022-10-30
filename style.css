@@ -1,3 +1,9 @@
+body{
+	margin:  0px;
+	padding-top: 80px;
+	padding-left: 90px;
+	background-color: #f8f9fa;
+}
 img{
 	width: 100%;
 	object-fit: contain;
@@ -29,10 +35,6 @@ p{
 	line-height: 22px;
 	margin-bottom: 50px;
 }
-.search-box {
-	display: block;
-	margin-bottom: 10px;
-}
 .video-preview{
 	min-width: 300px;
 	width: 100%;
@@ -63,26 +65,124 @@ p{
 }
 .video-grid{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;	
-	column-gap: 10px;
-	row-gap: 40px
+	grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(300px, 100%/5)), 1fr)); 	
+	grid-auto-columns: 1;
+	column-gap: 20px;
+	row-gap: 40px;
+	margin-right: 20px;
+
 }
 .header{
 	height: 56px;
 	display: flex;
 	justify-content: space-between;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: white;
+	border-bottom: 1px solid rgb(242, 242, 242);
 }
 .left-section{
 	width: 150px;
-	background-color: lightskyblue;
+	display: flex;
+	align-items: center;
+	margin-right: 5px;
+}
+#menu{
+	width: 23px;
+	margin-left: 28px;
+}
+#youtube-logo{
+	width: 97px;
+	margin-left: 25px;
 }
 .middle-section{
 	flex: 1;
 	max-width: 500px;
-	margin-left: 70px;
+	margin-left: 20px;
 	margin-right: 50px;
-	background-color: lightpink;
+	display: flex;
+	align-items: center;
+}
+#search-box {
+	width: 100%;
+	height: 39px;
+	border: 1px solid #CCCCCC;
+	border-radius: 2px 0 0 2px;
+	border-right: none;
+	box-shadow: 1px 1px inset #F0F0F0;
+	padding-left: 20px;
+	font-family: Roboto;
+	font-size: 16px;
+}
+#search-box::placeholder{
+	font-family: Roboto;
+	font-size: 16px;
+}
+#search-box:focus::placeholder{
+	color: transparent;
+}
+#search-button{
+	width: 73px;
+	height: 43px;
+	border-radius: 0 2px 2px 0;
+	border: 1px solid #CCCCCC;
+}
+#search-button img{
+	width: 30px;
 }
 .right-section{
 	width: 200px;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
 }
+.right-section img{
+	width: 25px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+#avatar{
+	width: 35px;
+	border-radius: 35px;
+}
+
+#sidebar{
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	top: 55px;
+	background-color: white;
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#sidebar img{
+	width: 25px;
+	margin-top: 20px;
+}
+#sidebar p{
+	margin-top: 5px;
+	font-size: 10px;
+}
+
+.menu-item-container{
+	width: 80px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
